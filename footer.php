@@ -67,7 +67,7 @@
                     <ul class="footer-nav-horiz-ft">
                         <li><a href="privacy-policy .php">Privacy Policy   </a></li>
                         <li>|</li>
-                        <li><a href="disclaimer.php">Disclaimer</a></li>
+                        <li><a href="disclaimer.phpA">Disclaimer</a></li>
                     </ul>
                 </div>
             </div>
