@@ -65,9 +65,9 @@
                 </div>
                 <div class="col-md-3 text-end">
                     <ul class="footer-nav-horiz-ft">
-                        <li><a href="#">Privacy Policy   </a></li>
+                        <li><a href="privacy-policy .php">Privacy Policy   </a></li>
                         <li>|</li>
-                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="disclaimer.php">Disclaimer</a></li>
                     </ul>
                 </div>
             </div>

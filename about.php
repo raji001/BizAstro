@@ -238,7 +238,7 @@
                         </div>
                         <div class="course-content">
                             <h2 class="title">Achieving Success Through Astrological Guidance: No Costly Remedies, Full of Practical Wisdom</h2>
-                            <a href="https://www.amazon.in/Achieving-Astrological-Guidance-Paperback-Book-100_Muthu/dp/B07WVXP7PH" target="_blank" class="btn btn-orange">View Course</a>
+                            <a href="https://www.amazon.in/Achieving-Astrological-Guidance-Paperback-Book-100_Muthu/dp/B07WVXP7PH" target="_blank" class="btn btn-orange">View Book</a>
                         </div>
                     </div>
                     <!-- // course container -->
