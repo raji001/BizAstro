@@ -45,7 +45,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <input class="form-control" placeholder="Mobile No." type="text" id="phone" name="phone" required>
-                                        <span class="error-message" id="phoneError">Please enter a 10-digit phone number</span>                                        
+                                        <span class="error-message" id="phoneError">Please enter a 10-digit phone number</span>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
@@ -54,7 +54,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12 text-end">
-                                    <button type="submit" class="btn btn-submit">Submit</button>
+                                    <button type="submit" class="btn btn-submit btn-bizastro">Submit</button>
                                 </div>
                             </div>
                         </form>
@@ -188,14 +188,14 @@
             var name = document.forms["enquiryForm"]["name"].value;
             var email = document.forms["enquiryForm"]["email"].value;
             var phone = document.forms["enquiryForm"]["phone"].value;
-            var message = document.forms["enquiryForm"]["CompanyName"].value;
+            // var message = document.forms["enquiryForm"]["message"].value;
             var isValid = true;
 
             // Reset error messages
             document.getElementById("nameError").style.display = "none";
             document.getElementById("emailError").style.display = "none";
             document.getElementById("phoneError").style.display = "none";
-            document.getElementById("companyError").style.display = "none";
+            // document.getElementById("companyError").style.display = "none";
 
             if (name === "") {
                 document.getElementById("nameError").style.display = "block";
@@ -247,15 +247,15 @@
                     cache: false,
                     async: true,
                     beforeSend: function() {
-                        $('.btn-krediq').html('<div class="">Processing...</div>');
-                        $('.btn-krediq').attr("disabled", true);
+                        $('.btn-bizastro').html('<div class="">Processing...</div>');
+                        $('.btn-bizastro').attr("disabled", true);
                     },
                     success: function(response) {
                         // Handle the response here, e.g., show a success message
                         //alert("Form submitted successfully!");
                         // You can also redirect to a thank you page if needed
-                        $('.btn-krediq').html('<div class="">Submit</div>');
-                        $('.btn-krediq').attr("disabled", false);
+                        $('.btn-bizastro').html('<div class="">Submit</div>');
+                        $('.btn-bizastro').attr("disabled", false);
                     
                         window.location.href = "thank_you.html";
                     },

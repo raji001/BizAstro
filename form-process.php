@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email_message .= "Phone: $phone\n";
     $email_message .= "Message:\n$message\n\n";
     $email_message .= "Please respond to the enquiry at your earliest convenience.\n\n";
-    $email_message .= "Best regards,\nKrediq";
+    $email_message .= "Best regards,\nBizAsto";
     
     // Additional headers
     $headers = "From: $email\r\n";

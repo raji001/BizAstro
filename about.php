@@ -200,7 +200,7 @@
                             <div class="divided"></div>
                             <h2 class="title">Astrological study of Modern careers in Tamil(Advanced)</h2>
                             <p class="desc">A Complete course to learn the fundamental concepts of Vedic astrology</p>
-                            <a href="" class="btn btn-orange">View Course</a>
+                            <a href="https://www.amazon.in/Astrological-Study-Modern-Careers-Assignments-ebook/dp/B09DSWNN94" class="btn btn-orange">View Course</a>
                         </div>
                     </div>
                     <div class="col-md-4">
