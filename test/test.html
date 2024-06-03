@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stacking Containers on Scroll</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .container .content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.5s ease;
+    transform: translateY(100%);
+  }
+
+  .container .content.show {
+    transform: translateY(0);
+  }
+
+  .container .content h2 {
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="content">
+    <h2>Container 1</h2>
+    <p>This is the first container.</p>
+  </div>
+</div>
+<div class="container">
+  <div class="content">
+    <h2>Container 2</h2>
+    <p>This is the second container.</p>
+  </div>
+</div>
+<div class="container">
+  <div class="content">
+    <h2>Container 3</h2>
+    <p>This is the third container.</p>
+  </div>
+</div>
+<div class="container">
+  <div class="content">
+    <h2>Container 4</h2>
+    <p>This is the fourth container.</p>
+  </div>
+</div>
+<div class="container">
+  <div class="content">
+    <h2>Container 5</h2>
+    <p>This is the fifth container.</p>
+  </div>
+</div>
+<div class="container">
+  <div class="content">
+    <h2>Container 6</h2>
+    <p>This is the sixth container.</p>
+  </div>
+</div>
+
+<script>
+  const containers = document.querySelectorAll('.container');
+
+  function checkInView() {
+    containers.forEach((container, index) => {
+      const rect = container.getBoundingClientRect();
+      const visible = (index === 0 || index === containers.length - 1) || (rect.top >= 0 && rect.bottom <= window.innerHeight);
+      container.querySelector('.content').classList.toggle('show', visible);
+    });
+  }
+
+  document.addEventListener('scroll', checkInView);
+  window.addEventListener('resize', checkInView);
+  checkInView(); // Initial check
+</script>
+</body>
+</html>
