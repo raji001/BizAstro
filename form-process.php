@@ -1,23 +1,15 @@
-<?php
-
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {  
-    echo "hello";
     $name = $_POST["name"];
     $email = $_POST["email"];
     $phone = $_POST["phone"];
     $message = $_POST["message"];
 
-    // Set the recipient email address (Admin's email)
     $to = "muthuvijayanelango@innovativeastrosolutions.com";
-
-    // Set the email subject
     $subject = "Enquiry from $name";
-
-    // Compose the email message
     $email_message = "Dear BizAstro,\n\n";
     $email_message .= "You have received an enquiry from $name. Here are the details:\n\n";
     $email_message .= "Name: $name\n";
@@ -27,16 +19,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email_message .= "Please respond to the enquiry at your earliest convenience.\n\n";
     $email_message .= "Best regards,\nBizAsto";
     
-    // Additional headers
     $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";
 
-    // Send the email
     if (mail($to, $subject, $email_message, $headers)) {
-        // Redirect to a thank you page or display a success message
-        header("Location: thank_you.html");
-        
-        // Prepare data for the CURL request
         $postData = json_encode([
             'name' => $name,
             'email' => $email,
@@ -63,14 +49,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         ));
         
         $response = curl_exec($curl);
-        
+        if ($response === false) {
+            $error = curl_error($curl);
+            file_put_contents('error_log.txt', "CURL Error: " . $error . "\n", FILE_APPEND);
+            header("Location: error.html");
+        } else {
+            file_put_contents('error_log.txt', "CURL Response: " . $response . "\n", FILE_APPEND);
+            header("Location: thank_you.html");
+        }
         curl_close($curl);
-        
         exit;
     } else {
-        // Redirect to an error page or display an error message
+        file_put_contents('error_log.txt', "Failed to send email\n", FILE_APPEND);
         header("Location: error.html");
         exit;
     }
 }
-?>
