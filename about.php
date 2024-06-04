@@ -69,7 +69,7 @@
                             <h2 class="h2">A Journey of Passion and Purpose with Muthu Vijayan Elango</h2>
                             <div class="divided mb-5"></div>
                             <p class="desc">Muthu Vijayan Elango is an astrologer and certified life coach at <a
-                                    href="https://www.innovativeastrosolutions.com/home">innovativeastrosolutions.com</a>. His deep-rooted passion for astrology was
+                                    href="https://www.innovativeastrosolutions.com/home" target="_blank">innovativeastrosolutions.com</a>. His deep-rooted passion for astrology was
                                 nurtured under the guidance of his father, Elango, paving the way for a journey spanning over
                                 two decades. Despite holding a Master's degree in engineering, Muthu chose to embark on a new
                                 path, transitioning from a successful corporate career to pursue his calling in astrology
@@ -200,7 +200,7 @@
                             <div class="divided"></div>
                             <h2 class="title">Astrological study of Modern careers in Tamil(Advanced)</h2>
                             <p class="desc">A Complete course to learn the fundamental concepts of Vedic astrology</p>
-                            <a href="https://www.amazon.in/Astrological-Study-Modern-Careers-Assignments-ebook/dp/B09DSWNN94" class="btn btn-orange">View Course</a>
+                            <a href="https://www.udemy.com/course/astrological-study-of-modern-careers-in-tamil/?referralCode=E8B398D188F7FAA8132D" target="_blank" class="btn btn-orange">View Course</a>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -402,13 +402,13 @@
                 <div class="row align-items-center">
                     <div class="col-md-9 col-lg-9">
                         <div class="card-tl ms-5">
-                            Book your first <span>5-minute appointment free</span><br>
+                            Book your first <span>15-minute appointment free</span><br>
                             to explore how Muthu can help unlock the potential growth of your business.
                         </div>
                     </div>
                     <div class="col-md-3 col-lg-3 text-end">
                         <div class="cart-cta me-5">
-                            <a href="#" class="btn">Book a call</a>
+                            <a href="https://calendly.com/muthuvijayanelango/15-mins-appointment" target="_blank" class="btn">Book a call</a>
                         </div>
                     </div>
                 </div>

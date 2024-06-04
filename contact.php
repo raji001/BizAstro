@@ -23,11 +23,20 @@
                         <h4 class="h4">Contact</h4>
                         <h2>Get in Touch</h2>
                         <p>Reach out to us through the channels below and let's embark on a journey fueled by planetary wisdom and strategic foresight</p>
-                        <a href="https://calendly.com/muthuvijayanelango/15-mins-appointment" class="btn btn-danger btn-prime">Book an appointment</a>
+                        <a href="https://calendly.com/muthuvijayanelango/15-mins-appointment" target="_blank" class="btn btn-danger btn-prime">Book an appointment</a>
                     </div>
                 </div>
                 <div class="col-md-7 col-lg-7">
                     <div class="form-container">
+                    <?php if (isset($validationErrors)): ?>
+                        <div class="alert alert-danger">
+                            <ul>
+                                <?php foreach ($validationErrors as $error): ?>
+                                    <li><?= $error ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    <?php endif; ?>
                         <form class="form" id="homeform" name="enquiryForm" action="form-process.php" method="post" onsubmit="return validateForm();">
                             <div class="form-inner row">
                                 <div class="col-md-12">
@@ -188,16 +197,15 @@
             var name = document.forms["enquiryForm"]["name"].value;
             var email = document.forms["enquiryForm"]["email"].value;
             var phone = document.forms["enquiryForm"]["phone"].value;
-            // var message = document.forms["enquiryForm"]["message"].value;
+            var message = document.forms["enquiryForm"]["message"].value;
             var isValid = true;
 
             // Reset error messages
             document.getElementById("nameError").style.display = "none";
             document.getElementById("emailError").style.display = "none";
             document.getElementById("phoneError").style.display = "none";
-            // document.getElementById("companyError").style.display = "none";
 
-            if (name === "") {
+            if (name === "" || name.length < 3) {
                 document.getElementById("nameError").style.display = "block";
                 isValid = false;
             }
@@ -217,7 +225,7 @@
             }
 
             if (message === "") {
-                document.getElementById("companyError").style.display = "block";
+                document.getElementById("messageError").style.display = "block";
                 isValid = false;
             }
 
